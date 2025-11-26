@@ -34,16 +34,24 @@ public class Ejemplo06 {
         int tabla;
         int operacion;
         int contador = 1;
+        int limite;
         System.out.println("Ingrese la tabla a generar");
         tabla = entrada.nextInt(); // 2
+        System.out.println("Ingrese el limite de la tabla ");
+        limite = entrada.nextInt(); // 2
+
+        if (tabla %2!=0 || limite %2!=0) {
+            tabla = 10;
+            limite = 20;
+        }
 
         do {
             operacion = tabla * contador; // 2*1=2 // 2*2=4
-                                   // 2 x 1 = 2
-                                   // 2 x 2 = 4
-            System.out.printf("%d x %d = %d\n", 
-                    tabla, 
-                    contador, 
+            // 2 x 1 = 2
+            // 2 x 2 = 4
+            System.out.printf("%d x %d = %d\n",
+                    tabla,
+                    contador,
                     operacion);
             contador = contador + 1;
         } while (contador <= 10);
