@@ -22,26 +22,28 @@ public class Ejemplo08 {
 
     public static void main(String[] args) {
 
-        // TODO code application logic here
         int limite = 10;
         int numerador = 1;
         int denominador = 1;
-        String signo;
+        String signo = "";
+
         String cadena = "";
 
         do {
             // para manejar el signo asociado 
             if (denominador % 2 == 0) {
-                signo = "+";
-            } else {
                 signo = "-";
+            } else {
+
+                signo = "+";
             }
-            
-            cadena = String.format("%s%s%d/%d ", 
+
+            cadena = String.format("%s%s%d/%d\n ",
                     cadena,
                     signo,
-                    numerador, 
+                    numerador,
                     denominador);
+            numerador = numerador + 1;
             denominador = denominador + 1;
 
         } while (denominador <= limite);
@@ -49,4 +51,5 @@ public class Ejemplo08 {
         System.out.println(cadena);
 
     }
+
 }
